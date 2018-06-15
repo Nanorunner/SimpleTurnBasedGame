@@ -7,6 +7,7 @@ class Weapon
 private:
 	string name;
 	int damage;
+	int rangeDamage;
 	int magicDamage;
 	int heal;
 	int dmgrange;
@@ -18,6 +19,7 @@ public:
 		name = "Base Sword";
 		damage = 50;
 		magicDamage = 0;
+		rangeDamage = 0;
 		heal = 0;
 		dmgrange = 1;
 		healrange = 0;
@@ -27,6 +29,10 @@ public:
 	string getName()
 	{
 		return name;
+	}
+	int getRangeDamage()
+	{
+		return rangeDamage;
 	}
 	int getDamage()
 	{
@@ -60,6 +66,10 @@ public:
 	void setDamage(int i)
 	{
 		damage = i;
+	}
+	void setRangedamage(int i)
+	{
+		rangeDamage = i;
 	}
 	void setMagicdamage(int i)
 	{

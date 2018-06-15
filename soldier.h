@@ -3,17 +3,19 @@
 #include "weapon.h"
 #include "armor.h"
 
-class Tank
+class Soldier
 {
 private:
 	CharacterBase base;
 	Weapon sword;
 	Armor leathers;
 	int currentHealth;
+	bool vecFlag;
 public:
-	Tank::Tank()
+	Soldier::Soldier()
 	{
 		currentHealth = base.getHealth();
+		vecFlag = false;
 	}
 	bool onAttack(int dmgvals[])
 	{
@@ -55,5 +57,9 @@ public:
 	Weapon getWeaponProperties()
 	{
 		return sword;
+	}
+	bool getvecFlag()
+	{
+		return vecFlag;
 	}
 };

@@ -3,23 +3,26 @@
 #include "weapon.h"
 #include "armor.h"
 
-class Tank
+class Archer
 {
 private:
 	CharacterBase base;
 	Weapon bowandarrow;
 	Armor leathers;
 	int currentHealth;
+	bool vecFlag;
 public:
-	Tank::Tank()
+	Archer::Archer()
 	{
 		base.setSymbol("A");
 		currentHealth = base.getHealth();
 		base.setStatus(true);
 		base.setReqPoints(30);
 		bowandarrow.setName("Bow and Arrow");
-		bowandarrow.setDamage(350);
+		bowandarrow.setDamage(0);
+		bowandarrow.setRangedamage(350);
 		bowandarrow.setDmgrange(3);
+		vecFlag = false;
 	}
 	bool onAttack(int dmgvals[])
 	{
@@ -61,5 +64,9 @@ public:
 	Weapon getWeaponProperties()
 	{
 		return bowandarrow;
+	}
+	bool getvecFlag()
+	{
+		return vecFlag;
 	}
 };

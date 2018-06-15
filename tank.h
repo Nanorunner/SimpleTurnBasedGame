@@ -10,6 +10,7 @@ private:
 	Weapon greatsword;
 	Armor heavySteel;
 	int currentHealth;
+	bool vecFlag;
 public:
 	Tank::Tank()
 	{
@@ -24,6 +25,7 @@ public:
 		heavySteel.setName("Steel Plate");
 		heavySteel.setPhysicalResistance(.40);
 		heavySteel.setRangedResistance(.30);
+		vecFlag = false;
 	}
 	bool onAttack(int dmgvals[])
 	{
@@ -65,5 +67,9 @@ public:
 	Weapon getWeaponProperties()
 	{
 		return greatsword;
+	}
+	bool getvecFlag()
+	{
+		return vecFlag;
 	}
 };
