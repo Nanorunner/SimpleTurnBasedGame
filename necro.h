@@ -4,7 +4,7 @@
 #include "armor.h"
 #include <vector>
 
-class Support
+class Necro
 {
 private:
 	CharacterBase base;
@@ -15,7 +15,7 @@ private:
 	int cooldown;
 	bool offcooldown;
 public:
-	Support::Support()
+	Necro::Necro()
 	{
 		//damage
 		Weapon claws;

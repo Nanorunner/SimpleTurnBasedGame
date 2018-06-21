@@ -29,7 +29,7 @@ public:
 		Weapon staff;
 		staff.setName("Staff of Damage");
 		staff.setDamage(0);
-		staff.setMagicdamage(350);
+		staff.setMagicdamage(150);
 		staff.setDmgrange(3);
 		//support
 		Weapon bufftastic;
